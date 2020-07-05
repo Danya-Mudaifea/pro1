@@ -1,7 +1,7 @@
 build :
 	docker build -t offic-serivce .
 run :
-	docker run -it -p 80:80 --name devops1 offic-serivce
+	docker run -it -p 80:8084 --name devops1 offic-serivce
 logs:
 	docker logs offic-serivce
 
