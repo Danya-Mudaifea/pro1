@@ -1,17 +1,17 @@
 build :
-	docker build -t offic-serivce .
+	docker build -t office-serivce .
 
 run :
-	docker run -it -p 8084:80 --name office-con offic-serivce
+	docker run -it -p 8084:80 --name container-office office-serivce
 
 logs:
-	docker logs offic-serivce
+	docker logs office-serivce
 
 follow:
-	docker logs -f offic-serivce
+	docker logs -f office-serivce
 
 stop:
-	docker stop offic-serivce
+	docker stop office-serivce
 
 clean:
-	docker rmi -f offic-serivce
+	docker rmi -f office-serivce
