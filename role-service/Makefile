@@ -14,4 +14,4 @@ stop:
 	docker stop role-service 
 
 clean: 
-	docker rm role-service 
+	docker rmi -f role-service 
