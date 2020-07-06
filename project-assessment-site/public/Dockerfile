@@ -1,6 +1,25 @@
-FROM ubuntu
-RUN apt-get update
-RUN apt-get install nginx -y
-COPY index.html /var/www/html/
+FROM alpine:latest
+
+RUN apk add --no-cache nodejs npm
+
+WORKDIR /level1-project
+
+COPY . /level1-projcet
+
+RUN npm install
+
+EXPOSE npm install
+
 EXPOSE 80
-CMD ["nginx","-g","daemon off;"]
+
+ENTRYPOINT ["node"]
+
+
+CMD ["index.js]
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                            
