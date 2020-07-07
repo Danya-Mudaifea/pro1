@@ -1,20 +1,15 @@
 .ONESHELL:
 SHELL = /bin/bash
 
-build:
-	DOCKER_BUILDKIT=1 docker-compose build
-
-run:
-	docker run -it --rm danya-Mudaifea/devopsproject/project-assessment-site
-
 up:
-	docker-compose up -d
-
+	docker-compose up
+rebuild:
+	docker-compose build
 down:
 	docker-compose down
-
+stop:
+	docker stop $$(docker ps -aq)
 clean:
-	docker rm -f $$(docker ps -qa)
-
-logs:
+	docker rm $$(docker ps -aq)
+log:
 	docker-compose logs -f
