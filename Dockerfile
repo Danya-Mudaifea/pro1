@@ -10,4 +10,4 @@ env DOCKER_BUILDKIT=1
 
 entrypoint ["/usr/bin/make"]
 
-CMD ["project-run"]
+CMD ["up"]
