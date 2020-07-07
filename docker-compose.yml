@@ -1,0 +1,37 @@
+version: '3.5' 
+services:
+        department-service:
+           container_name: dep-container 
+           image: department-service 
+           build: ./department-service
+           ports:
+                   - "8083:80"
+        office-service:
+           container_name: container-office
+           image: office-service
+           build: ./office-service
+           ports:
+                   - "8084:80"
+        role-service:
+           container_name: role-service
+           image: role-service
+           build: ./role-service
+           ports:
+                   - "8082:80"
+        person-service:
+           container_name: person-con
+           image: person-service
+           build: ./person-service
+           ports:
+                   - "8081:80"
+        project-assessment-site:
+           container_name: node-container
+           image: devopsproject/project-assessment-site
+           build: ./project-assessment-site
+           ports:
+                   - "80:80"
+           depends_on:
+                   - person-service
+                   - role-service
+                   - office-service 
+                   - department-service

@@ -2,9 +2,9 @@
 SHELL = /bin/bash
 
 up:
-	docker-compose up
+	docker-compose up -d
 rebuild:
-	docker-compose --build
+	docker-compose build
 down:
 	docker-compose down
 stop:
