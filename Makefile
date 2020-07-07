@@ -8,8 +8,10 @@ rebuild:
 down:
 	docker-compose down
 stop:
-	docker stop $$(docker ps -aq)
-clean:
-	docker rm $$(docker ps -aq)
+	docker container stop $$(docker container ls -aq)
+cleani:
+	docker rmi -f $$(docker images)
 log:
 	docker-compose logs -f
+clean:
+	docker rm -f $$(docker ps -qa)
