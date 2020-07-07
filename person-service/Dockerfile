@@ -15,4 +15,3 @@ copy --from=build "/usr/src/app/pro1/person-service/target/person-service-1.0.0.
 cmd ["java", "-jar", "person-service-1.0.0.jar"]
 
 expose 80
-          
