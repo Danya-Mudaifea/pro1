@@ -6,4 +6,4 @@ sudo apt install vim jq curl make oh-my-bash -y
 sudo apt install maven -y &&/
 mvn clean install
 sudo usermod -aG docker $USER
-chmod 777 script.sh
+chmod +x script.sh
