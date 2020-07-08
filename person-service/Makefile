@@ -1,7 +1,7 @@
 build:
 	docker build -t person-service .
 run:
-	docker run -it -p 8081:80 --name person-con person-service
+	docker run -d -p 8081:80 --name person-con person-service
 logs:
 	docker logs person-service 
 follow:
