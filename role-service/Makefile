@@ -2,7 +2,7 @@ build:
 	docker build --tag role-service . 
 
 run:
-	docker run -it --name role-service -p 8082:80 role-service
+	docker run -d --name role-service -p 8082:80 role-service
 
 logs: 
 	docker logs role-service 
