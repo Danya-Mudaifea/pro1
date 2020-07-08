@@ -1,6 +1,10 @@
 #!/bin/bash
-sudo apt install update -y
-sudo apt install docker.io -y &&/ docker-compose -y
-sudo apt install vim jq curl make 
+sudo apt-get update
+sudo apt install docker.io -y 
+sudo apt install docker-compose -y
+sudo apt install vim jq curl make -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" 
+sudo apt install maven -y &&/
+mvn clean install
 sudo usermod -aG docker $USER
-chmod 777 script.sh
+chmod +x script.sh
