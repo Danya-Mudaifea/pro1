@@ -2,7 +2,7 @@ build :
 	docker build -t office-serivce .
 
 run :
-	docker run -it -p 8084:80 --name container-office office-serivce
+	docker run -d -p 8084:80 --name container-office office-serivce
 
 logs:
 	docker logs office-serivce
