@@ -9,7 +9,3 @@ follow:
 	docker logs -f devopsproject/project-assessment-site
 stop:
 	docker stop devopsproject/project-assessment-site
-
-curl:
-	 curl http://15.236.225.62/ | jq '.'
-
